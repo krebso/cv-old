@@ -3,7 +3,8 @@
 % Packages
 \usepackage{fontawesome}                    % Social media icons
 \usepackage[cm]{fullpage}                   % Margins
-\usepackage[hidelinks]{hyperref}            % Hyperlinks
+% \usepackage[hidelinks]{hyperref}            % Hyperlinks
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=MidnightBlue,citecolor=green]{hyperref}
 \usepackage{titlesec}                       % Title formatting
 \usepackage{import}                         % File importing
 \usepackage{multicol}                       % Multiple columns
@@ -15,6 +16,7 @@
 \usepackage{graphicx}                       % Importing graphics
 \usepackage[export]{adjustbox}              % Aligning margins
 \usepackage{moresize}                       % HUGE size
+\usepackage{amsmath}
 
 % % Chinese
 % \usepackage{xeCJK}
@@ -33,6 +35,8 @@
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
+\setlength{\leftskip}{0pt}    % Removes left margin/padding
+\setlength{\parskip}{0pt}     % Controls vertical spacing between paragraphs
 
 % Quotes
 \usepackage[autostyle,english=american]{csquotes}
@@ -100,22 +104,26 @@
 }
 
 % Section titles
+% \titleformat{\section}{
+%    \scshape\raggedright\Large\color{color-title}}{}{0em}{}
 \titleformat{\section}{
-    \scshape\raggedright\Large\color{color-title}}{}{0em}{}[\color{color-title}\titlerule
-    \vspace{-\smallskipamount}]
+    \scshape\large\raggedright\color{color-title}}{}{0em}{}[\color{color-title}\titlerule
+    ]
 
 % Footer
 \fancyfoot[R]{Page \thepage \hspace{1pt} of \pageref{LastPage}}
 
 % Lists
+%\newcommand{\outerlist}[1]{
+%    \begin{itemize}[leftmargin=*] #1 \end{itemize}}
 \newcommand{\outerlist}[1]{
-    \begin{itemize}[leftmargin=*] #1 \end{itemize}}
+    \begin{itemize}[leftmargin=0pt, itemindent=0pt, labelindent=0pt] #1 \end{itemize}}
 \newcommand{\denseouterlist}[1]{
     \begin{itemize}[leftmargin=*,itemsep=0pt] #1 \end{itemize}}
 \newcommand{\innerlist}[1]{
     \begin{itemize}[topsep=0pt] #1 \end{itemize}}
 \newcommand{\orderedouterlist}[1]{
-    \begin{enumerate}[leftmargin=*] #1 \end{enumerate}}
+    \begin{enumerate}[leftmargin=*, label={[\arabic*]}] #1 \end{enumerate}}
 \newcommand{\denseorderedouterlist}[1]{
     \begin{enumerate}[leftmargin=*,itemsep=0pt] #1 \end{enumerate}}
 

@@ -10,39 +10,30 @@
 
 \usepackage{simplecv}
 
-\boldname{Cetin}{Doruk}{D.}
+\boldname{Krebs}{Martin}
 
 \begin{document}
 
 % Heading
-\headinginline{Doruk Çetin}{
-    \faEnvelope: \email{doruk.cetin.dc@gmail.com} \\
-    \faGlobe: \website{dcetin.me} 
+\headinginline{Martin Krebs}{
+    Email: \email{krebsmato@gmail.com} \\
+    Website: \website{immartinkrebs.com} \\ 
     % \faLinkedin: \linkedin{doruk-cetin} 
-    \faGithub: \github{dcetin}
+    Github: \github{krebso}
 }
 
-% \headingphoto{Doruk Çetin}{
-%     Website: \website{dcetin.me} \\ 
-%     Email: \email{dcetin@ethz.ch} \\
-%     % LinkedIn: \linkedin{doruk-cetin} \\
-%     GitHub: \github{dcetin}
-% }{photo.png}
+% heading
+\textit{I'm passionate about machine learning, algorithms, and making the world \\ a better place. I enjoy solving hard problems with real-world impact, \\ especially in a group of similarly driven individuals.}
 
 % Page One
 \import{sections/}{education.tex}
 \import{sections/}{experience.tex}
-\import{sections/}{publications.tex}
+\import{sections/}{awards.tex}
+\import{sections/}{teaching.tex}
 
 \pagebreak
 
 % Page Two
-\import{sections/}{teaching.tex}
-\sidebyside
-    {\import{sections/}{skills.tex}}
-    {\import{sections/}{languages.tex}}
-\import{sections/}{projects.tex}
-\import{sections/}{awards.tex}
-\import{sections/}{volunteering.tex}
+\import{sections/}{publications.tex}
 
 \end{document}
